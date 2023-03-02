@@ -1,0 +1,106 @@
+<!DOCTYPE html> <html><head>
+        <title>Game</title>
+    <style>body{
+	margin: 0;
+    font-family: sans-serif;
+    background-color: rgb(247, 189, 42);
+}
+div{
+	width: 50vw;
+    height: 25vh;
+    margin: auto;
+}
+#messages{
+    background: white;
+	text-align: center;
+    font-size: 50px;
+    
+}
+#messages p {
+	margin: 30px;   
+}
+#actions{
+	height: 50vh;
+}
+img{
+	height: 40vh;
+    width: 225px;
+}
+button{
+      font-family: "Open Sans", sans-serif;
+      font-size: 16px;
+      letter-spacing: 2px;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #000;
+      cursor: pointer;
+      border: 3px solid;
+      padding: 0.25em 0.5em;
+      box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+      position: relative;
+
+      -webkit-user-select: none;
+
+}
+
+button:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+
+.button-54 {
+    padding: 0.25em 0.75em;
+}
+
+
+
+
+
+
+</style></head>
+    <body>
+        <div id="messages">
+            <p id="message">Choose the door to alive</p>
+         
+        </div>
+        
+       
+        <div id="actions">
+        
+            <img src="https://i.pinimg.com/originals/82/c2/0b/82c20b8eacfe5d06faacd1da2b21a678.png" id="door-left">
+             <img src="https://i.pinimg.com/originals/82/c2/0b/82c20b8eacfe5d06faacd1da2b21a678.png" id="door-right">
+            
+		</div>
+        
+        
+        <div id="buttons">
+        	<button id="left">LEFT</button>
+            <button id="right">RIGHT</button>
+        </div>
+    
+
+<script>
+/*__POPCODESTART__*/
+var leftButton = document.querySelector("#left");
+var rightButton = document.querySelector("#right");
+var leftDoor = document.querySelector("#door-left");
+var rightDoor = document.querySelector("#door-right");
+var message = document.querySelector("#message");
+var body = document.querySelector("body");
+
+leftButton.onclick = function () {
+  rightDoor.src = "https://i.pinimg.com/originals/82/c2/0b/82c20b8eacfe5d06faacd1da2b21a678.png";
+  leftDoor.src = "https://www.pinpng.com/pngs/m/111-1116128_door-png-transparent-png.png";
+  message.innerHTML = "You alive";
+  rightDoor.src = "https://icon2.cleanpng.com/20171220/riq/open-door-png-5a3a4f7370c783.071264731513770867462.jpg";
+};
+
+rightButton.onclick = function () {
+  leftDoor.src = "https://i.pinimg.com/originals/82/c2/0b/82c20b8eacfe5d06faacd1da2b21a678.png";
+  rightDoor.src = "https://www.pinpng.com/pngs/m/111-1116128_door-png-transparent-png.png";
+  message.innerHTML = "You died";
+  body.style.background = "red";
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBvcGNvZGVQcmV2aWV3LmpzIl0sIm5hbWVzIjpbImxlZnRCdXR0b24iLCJkb2N1bWVudCIsInF1ZXJ5U2VsZWN0b3IiLCJyaWdodEJ1dHRvbiIsImxlZnREb29yIiwicmlnaHREb29yIiwibWVzc2FnZSIsImJvZHkiLCJvbmNsaWNrIiwic3JjIiwiaW5uZXJIVE1MIiwic3R5bGUiLCJiYWNrZ3JvdW5kIl0sIm1hcHBpbmdzIjoiQUFBQSxJQUFJQSxVQUFVLEdBQUdDLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixPQUF2QixDQUFqQjtBQUNBLElBQUlDLFdBQVcsR0FBR0YsUUFBUSxDQUFDQyxhQUFULENBQXVCLFFBQXZCLENBQWxCO0FBQ0EsSUFBSUUsUUFBUSxHQUFHSCxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsWUFBdkIsQ0FBZjtBQUNBLElBQUlHLFNBQVMsR0FBR0osUUFBUSxDQUFDQyxhQUFULENBQXVCLGFBQXZCLENBQWhCO0FBQ0EsSUFBSUksT0FBTyxHQUFHTCxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsVUFBdkIsQ0FBZDtBQUNBLElBQUlLLElBQUksR0FBR04sUUFBUSxDQUFDQyxhQUFULENBQXVCLE1BQXZCLENBQVg7O0FBS0FGLFVBQVUsQ0FBQ1EsT0FBWCxHQUFxQixZQUFVO0FBQzNCSCxFQUFBQSxTQUFTLENBQUNJLEdBQVYsR0FBZ0IsOEVBQWhCO0FBQ0hMLEVBQUFBLFFBQVEsQ0FBQ0ssR0FBVCxHQUFlLHdFQUFmO0FBQ0dILEVBQUFBLE9BQU8sQ0FBQ0ksU0FBUixHQUFvQixXQUFwQjtBQUNBTCxFQUFBQSxTQUFTLENBQUNJLEdBQVYsR0FBZ0IsZ0dBQWhCO0FBQ0gsQ0FMRDs7QUFPQU4sV0FBVyxDQUFDSyxPQUFaLEdBQXNCLFlBQVU7QUFDNUJKLEVBQUFBLFFBQVEsQ0FBQ0ssR0FBVCxHQUFlLDhFQUFmO0FBQ0hKLEVBQUFBLFNBQVMsQ0FBQ0ksR0FBVixHQUFnQix3RUFBaEI7QUFDR0gsRUFBQUEsT0FBTyxDQUFDSSxTQUFSLEdBQW9CLFVBQXBCO0FBQ0FILEVBQUFBLElBQUksQ0FBQ0ksS0FBTCxDQUFXQyxVQUFYLEdBQXdCLEtBQXhCO0FBQ0gsQ0FMRCIsInNvdXJjZXNDb250ZW50IjpbImxldCBsZWZ0QnV0dG9uID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIiNsZWZ0XCIpO1xubGV0IHJpZ2h0QnV0dG9uID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIiNyaWdodFwiKTtcbmxldCBsZWZ0RG9vciA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIjZG9vci1sZWZ0XCIpO1xubGV0IHJpZ2h0RG9vciA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIjZG9vci1yaWdodFwiKTtcbmxldCBtZXNzYWdlID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIiNtZXNzYWdlXCIpO1xubGV0IGJvZHkgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiYm9keVwiKTtcblxuXG5cblxubGVmdEJ1dHRvbi5vbmNsaWNrID0gZnVuY3Rpb24oKXtcbiAgICByaWdodERvb3Iuc3JjID0gXCJodHRwczovL2kucGluaW1nLmNvbS9vcmlnaW5hbHMvODIvYzIvMGIvODJjMjBiOGVhY2ZlNWQwNmZhYWNkMWRhMmIyMWE2NzgucG5nXCI7XG5cdGxlZnREb29yLnNyYyA9IFwiaHR0cHM6Ly93d3cucGlucG5nLmNvbS9wbmdzL20vMTExLTExMTYxMjhfZG9vci1wbmctdHJhbnNwYXJlbnQtcG5nLnBuZ1wiO1xuICAgIG1lc3NhZ2UuaW5uZXJIVE1MID0gXCJZb3UgYWxpdmVcIjtcbiAgICByaWdodERvb3Iuc3JjID0gXCJodHRwczovL2ljb24yLmNsZWFucG5nLmNvbS8yMDE3MTIyMC9yaXEvb3Blbi1kb29yLXBuZy01YTNhNGY3MzcwYzc4My4wNzEyNjQ3MzE1MTM3NzA4Njc0NjIuanBnXCI7XG59O1xuXG5yaWdodEJ1dHRvbi5vbmNsaWNrID0gZnVuY3Rpb24oKXtcbiAgICBsZWZ0RG9vci5zcmMgPSBcImh0dHBzOi8vaS5waW5pbWcuY29tL29yaWdpbmFscy84Mi9jMi8wYi84MmMyMGI4ZWFjZmU1ZDA2ZmFhY2QxZGEyYjIxYTY3OC5wbmdcIjtcblx0cmlnaHREb29yLnNyYyA9IFwiaHR0cHM6Ly93d3cucGlucG5nLmNvbS9wbmdzL20vMTExLTExMTYxMjhfZG9vci1wbmctdHJhbnNwYXJlbnQtcG5nLnBuZ1wiO1xuICAgIG1lc3NhZ2UuaW5uZXJIVE1MID0gXCJZb3UgZGllZFwiO1xuICAgIGJvZHkuc3R5bGUuYmFja2dyb3VuZCA9IFwicmVkXCI7XG59OyJdfQ==</script></body></html>
