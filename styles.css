@@ -1,0 +1,59 @@
+body{
+	margin: 0;
+    font-family: sans-serif;
+    background-color: rgb(247, 189, 42);
+}
+div{
+	width: 50vw;
+    height: 25vh;
+    margin: auto;
+}
+#messages{
+    background: white;
+	text-align: center;
+    font-size: 50px;
+    
+}
+#messages p {
+	margin: 30px;   
+}
+#actions{
+	height: 50vh;
+}
+img{
+	height: 40vh;
+    width: 225px;
+}
+button{
+      font-family: "Open Sans", sans-serif;
+      font-size: 16px;
+      letter-spacing: 2px;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #000;
+      cursor: pointer;
+      border: 3px solid;
+      padding: 0.25em 0.5em;
+      box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+      position: relative;
+
+      -webkit-user-select: none;
+
+}
+
+button:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+
+.button-54 {
+    padding: 0.25em 0.75em;
+}
+
+
+
+
+
+
